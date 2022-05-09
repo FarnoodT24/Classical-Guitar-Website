@@ -1,0 +1,632 @@
+/*This is the CSS  code for the home page of my website*/
+/*Created by Farnood Tajbakhsh*/
+body{
+    margin: 0;
+    padding: 0;
+}
+/* first background */
+.background0 {
+	background-image: url("https://musicaroo.com/wp-content/uploads/2020/09/classical-guitar-shapes.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.25),
+      rgba(108, 88, 14, 0.25)
+    ),
+    url("https://musicaroo.com/wp-content/uploads/2020/09/classical-guitar-shapes.jpg");
+}
+/* CSS for shaped section */
+section{
+    position:relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+section:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    /* background: linear-gradient(45deg, #898b21,  #976b19); */
+    background-image: radial-gradient(circle closest-corner at 100px 100px, #976b19, #898b21 2%, #976b19 20%);
+    opacity: 0.7;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(1.1);
+
+
+}
+
+section .content{
+    z-index: 1;
+
+}
+
+section .content h2{
+    margin-bottom: 250;
+    margin-left: 210;
+    padding: 0;
+    color: #fff;
+    font-size: 7em;
+    font-family: 'Niconne', cursive;
+
+    font-weight: 600;
+    /* text-shadow: 0px 0px 2px #fdfdfd; */
+    color: transparent;
+    background-image: url("https://media.istockphoto.com/photos/closeup-shot-of-classical-guitar-picture-id1224553442?k=20&m=1224553442&s=612x612&w=0&h=OgzDpRtjv6le1tsCpYaXtHoW5Nuux1MPQZleLv3MdqI=");
+    background-size: 250px;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+
+.navbar{
+    margin-right: 1000;
+}
+
+.navbar ul { 
+    padding: 22px; 
+    text-align: left; 
+    } 
+   
+  .navbar ul li {  
+    margin-top: -20px;
+    padding-right: 50;
+    display: inline; 
+  } 
+   
+  .navbar ul li a { 
+    margin-top: -20px;
+    font-size: 20;
+    text-decoration: none; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white; 
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  } 
+   
+  .navbar ul li a:hover {
+    border: 2px solid rgb(161, 112, 32); 
+    transition-duration: 0.5s;
+      cursor: pointer; 
+      color: rgb(211, 132, 7);
+  } 
+/* end of CSS for shaped section */
+
+
+
+
+
+
+
+
+
+
+/* Image gallery section */
+
+.header1{
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(228, 217, 192);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgb(228, 217, 192),
+                 1px 2px 0px rgb(228, 217, 192),
+                 1px 3px 0px rgb(228, 217, 192),
+                 1px 4px 0px rgb(228, 217, 192),
+                 1px 5px 0px rgb(228, 217, 192),
+                 1px 6px 0px rgb(228, 217, 192),
+                 1px 10px 5px rgba(16, 16, 16, 0.5),
+                 1px 15px 10px rgba(16, 16, 16, 0.4),
+                 1px 20px 30px rgba(16, 16, 16, 0.3),
+                 1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+
+
+.background0-1 {
+	background-image: url("https://wallpaperaccess.com/full/3022376.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.65),
+      rgba(108, 88, 14, 0.65)
+    ),
+    url("https://wallpaperaccess.com/full/3022376.jpg");
+}
+
+
+
+
+.background1 {
+	background-image: url("https://eskipaper.com/images/music-notes-wallpaper-8.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.65),
+      rgba(108, 88, 14, 0.65)
+    ),
+    url("https://eskipaper.com/images/music-notes-wallpaper-8.jpg");
+}
+
+.rounded-circle{
+    width: 250px;
+    height: 250px;
+    margin-left:2.5cm;
+    /* mix-blend-mode: color-burn; */
+
+}
+
+
+
+
+
+
+
+/*A lot of CSS was needed for the popup image. The CSS for #myImg is for the styling of the image used to trigger the popup. 
+CSS Property border-radius is a general corner-rounding property and does not actually require a border for it to take effect. 
+The cursor property of CSS allows you to specify the type of cursor that should be displayed to the user. So when the user hovers over my image, 
+the cursor changes and they will know that they can click on it. The transition effect will start when the specified CSS property changes 
+(in 0.3 seconds). The long list of CSS for the .popup class is for the background of the popup image. display: none means that the element 
+is not displayed at all as it is hidden by default. I put the position as fixed so everything stays in one place. The z-index property in CSS 
+controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. By using z-index: 1; 
+I make sure that the popup stays on top of all the other elements. The padding-top, left, and top properties only affect the location of the box. 
+I put the width and height and height to 100% so the .popup takes up the full width and page. The overflow property specifies whether to clip the 
+content or to add scrollbars when the content of an element is too big to fit in the specified area. This was not necessary, but I set it as automatic. 
+I set the rgb colour to black, but set the opacity to 0.9 so that the background is somewhat visible. Next I styled the .popup-content which would be 
+the image or as the name suggests the CSS for the popup content. Auto is a CSS value that has a number of uses. It's the default value for a lot of 
+box-model properties like width , height , margin , and background-size. Thus instead of adding the values separately I put the margin as auto. display: 
+block means that the element is displayed as a block. A block-level element always starts on a new line and takes up the full width available. Since I 
+wanted this feature but did not want it to take up the full width, I set the width to 80 percent and also put the max width at 700 pixels so it does not 
+exceed that length. I created a second section of code for the popup-content and here I set and animation name and duration for the zoom feature I wanted 
+to include. To play out the animation, I had to use @keyframes along with the name of the animation. The scale() CSS function defines a transformation 
+that resizes an element on the 2D plane. By transforming from the scale of 0 to 1,  I create the zoom in animations which completes in a second. 
+Next I added CSS to the close button. When I used position: absolute; I positioned it relative to the nearest positioned ancestor which would be 
+the popup. The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements.
+When position is set to absolute or fixed , the right property specifies the distance between the element's right edge and the right edge of its 
+containing block. Because of the positioning properties I used, the close or X button will appear on the top right corner of the popup. I added a 
+colour and font size to the element as well. The CSS :hover selector is one of many pseudo-classes that are used to style elements. :hover is used 
+to select elements that users hover their cursor or mouse over. It can be used on all elements, not only on links.The :focus CSS pseudo-class represents 
+an element (such as a form input) that has received focus. This is triggered when the user clicks on the button. Thus when the user hovers over the X 
+there is a slight colour change, and the cursor will turn into a pointer as well. The @media rule is used in media queries to apply different styles for
+different media types/devices. I used that code for when the browser is shrunk, the image width would extend to 100%. */
+
+
+/* Style the Image Used to Trigger the Modal */
+#myGimg1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg1:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content1 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content1 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close1:hover,
+.close1:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Second image gallery modal */
+/* Style the Image Used to Trigger the Modal */
+#myGimg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg2:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content2 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close2 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close2:hover,
+.close2:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Third image gallery modal */
+/* Style the Image Used to Trigger the Modal */
+#myGimg3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg3:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content3 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content3 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close3:hover,
+.close3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Fourth image gallery modal */
+/* Style the Image Used to Trigger the Modal */
+#myGimg4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg4:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content4 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content4 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close4 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close4:hover,
+.close4:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Fifth image gallery modal */
+/* Style the Image Used to Trigger the Modal */
+#myGimg5 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg5:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG5 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content5 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content5 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close5 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close5:hover,
+.close5:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Sixth image gallery modal */
+/* Style the Image Used to Trigger the Modal */
+#myGimg6 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#myGimg6:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG6 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content6 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content6 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close6 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close6:hover,
+.close6:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* end of image gallery division */
+
+
+
+
+
+
+
+
+svg {
+    width: 100%;
+
+    display: block;
+    margin: 0 auto;
+}
+
+
+

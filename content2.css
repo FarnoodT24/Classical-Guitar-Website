@@ -1,0 +1,649 @@
+/*This is the CSS code for the second page of my website*/
+/*Created by Farnood Tajbakhsh*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/* first background */
+.background0 {
+	background-image: url("https://musicaroo.com/wp-content/uploads/2020/09/classical-guitar-shapes.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.25),
+      rgba(108, 88, 14, 0.25)
+    ),
+    url("https://musicaroo.com/wp-content/uploads/2020/09/classical-guitar-shapes.jpg");
+}
+/* CSS for shaped section */
+section{
+    position:relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+section:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    /* background: linear-gradient(45deg, #898b21,  #976b19); */
+    background-image: radial-gradient(circle closest-corner at 100px 100px, #976b19, #898b21 2%, #976b19 20%);
+    opacity: 0.7;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(1.1);
+
+
+}
+
+section .content{
+    /* position: relative; */
+    z-index: 1;
+    /* margin: 0 auto;
+    max-width: 900px;
+    text-align: center; */
+
+}
+
+section .content h2{
+    margin-bottom: 250;
+    margin-left: 200;
+    padding: 0;
+    color: #fff;
+    font-size: 7em;
+    font-family: 'Niconne', cursive;
+
+    font-weight: 600;
+    /* text-shadow: 0px 0px 2px #fdfdfd; */
+    color: transparent;
+    background-image: url("https://media.istockphoto.com/photos/closeup-shot-of-classical-guitar-picture-id1224553442?k=20&m=1224553442&s=612x612&w=0&h=OgzDpRtjv6le1tsCpYaXtHoW5Nuux1MPQZleLv3MdqI=");
+    background-size: 250px;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+
+.navbar{
+    margin-top: 100;
+    margin-right: 1000;
+}
+
+.navbar ul { 
+    padding: 22px; 
+    text-align: left; 
+    } 
+   
+  .navbar ul li {  
+    margin-top: -20px;
+    padding-right: 50;
+    display: inline; 
+  } 
+   
+  .navbar ul li a { 
+    margin-top: -20px;
+    font-size: 20;
+    text-decoration: none; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white; 
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  } 
+   
+  .navbar ul li a:hover {
+    border: 2px solid rgb(161, 112, 32); 
+    transition-duration: 0.5s;
+      cursor: pointer; 
+      color: rgb(211, 132, 7);
+  } 
+/* end of CSS for shaped section */
+
+
+
+/*Slideshow Css*/
+
+/*The box-sizing property allows us to include the padding and border in an element's total width and height. 
+If you set box-sizing: border-box; on an element, padding and border are included in the width and height: 
+Both divs are the same size now!*/
+* {box-sizing:border-box}
+
+/* Slideshow container positioning */
+.slideshow-container {
+  width: 60%;
+  position: relative;
+  margin: auto;
+}
+
+/*
+This class will allow you to create a text box so you can fill half the carrousel.
+Since we use overflow-wrap, text that gets too long horizontally will break.
+This means that if the word is too long, its continuation will appear on the next line.
+
+Overflow y allows the text to be scrollable. Without it, it will "overflow" below the divider
+making a mess on the elements below it.
+*/
+.galleryTextBox{
+	width: 50%;
+	height: 50%;
+	float:right;
+	background-color:#fff;
+	padding-left:5px;
+	padding-right:5px;
+	overflow-wrap: break-word;
+	overflow-y: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+  /*add fading animation for each slide*/
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+/*
+The right and left options make the arrows consistently spaced out from the center by an equal percent.
+So no matter the window size on your machine, the arrows will always be possitioned correctly horizontally.
+*/
+.next {
+  right: 17.5%;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 17.5%;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with low opacity*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+/*absolute position places it in top left hand corner 
+since it is based on the previous parent*/
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots for slide indications */
+.dot {
+  margin: 0 2px;
+  display: inline-block;
+}
+
+/*headiing styling*/
+.Gheading{
+  padding: 10 0 0 20px;
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+/*text styling*/
+.Gtext{
+  padding: 10 20 0 20px;
+  font-family: verdana;
+}
+
+/*Read More button*/
+.Gbutton{
+  margin: 10 0 0 20px;
+  font-family: verdana;
+  font-size: 15;
+  padding-top: 10px; 
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white; 
+  background: rgb(211, 132, 7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Gbutton: hover{
+  border: 2px solid green; 
+  transition-duration: 0.5s;
+  cursor: pointer; 
+  opacity: 0.8;
+}
+
+/*define fading css animation*/
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*end of slides CSS code*/
+
+
+
+
+.background0-1 {
+	background-image: url("https://wallpaperaccess.com/full/3022376.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.65),
+      rgba(108, 88, 14, 0.65)
+    ),
+    url("https://wallpaperaccess.com/full/3022376.jpg");
+}
+
+
+
+
+.background1 {
+	background-image: url("https://eskipaper.com/images/music-notes-wallpaper-8.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(108, 88, 14, 0.65),
+      rgba(108, 88, 14, 0.65)
+    ),
+    url("https://eskipaper.com/images/music-notes-wallpaper-8.jpg");
+}
+
+.rounded-circle{
+    width: 250px;
+    height: 250px;
+    margin-left:2.5cm;
+    /* mix-blend-mode: color-burn; */
+
+}
+
+
+/*flipcard*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+
+/*create container element*/
+.flip-card-3D-wrapper {
+  width: 60%;
+  height: 80%;
+  max-width: 1000px;
+  max-height: 350px;
+  /*change the positioning relative to the original location*/
+  position: relative;
+  /*The perspective property defines how many pixels a 3D element is placed from the view.
+  defines a transformation that sets the distance between the user and the z=0 plane, 
+  the perspective from which the viewer would be if the 2-dimensional interface were 3-dimensional.*/
+  perspective: 900px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/*add css to the flipcard*/
+#flip-card {
+  width: 100%;
+  height: 92%;
+  text-align: center;
+  margin: 50px auto;
+  position: absolute;
+  /*specifies a transition effect with a slow start, then fast, then end slowly*/
+  transition: all 1s ease-in-out;
+  /*tells the browser that the 3D transformed children of the element it's set on shouldn't be flattened into the plane of their parent*/
+  transform-style: preserve-3d;
+  border-radius: 5px;
+}
+.do-flip {
+  /*rotates an element about the vertical axis without deforming it*/
+  transform: rotateY(-180deg);
+}
+
+/* start button that starts both the quiz and the flipcard motion */
+#start{
+  position: relative;
+  top: 8px;
+  right: 8px;
+  width: 850px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  padding: 0;
+}
+
+
+
+.header1{
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(228, 217, 192);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgb(228, 217, 192),
+                 1px 2px 0px rgb(228, 217, 192),
+                 1px 3px 0px rgb(228, 217, 192),
+                 1px 4px 0px rgb(228, 217, 192),
+                 1px 5px 0px rgb(228, 217, 192),
+                 1px 6px 0px rgb(228, 217, 192),
+                 1px 10px 5px rgba(16, 16, 16, 0.5),
+                 1px 15px 10px rgba(16, 16, 16, 0.4),
+                 1px 20px 30px rgba(16, 16, 16, 0.3),
+                 1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+.h1Hover:hover{
+    border: 2px solid rgb(161, 112, 32); 
+    transition-duration: 0.5s;
+      cursor: pointer; 
+      opacity: 0.8;
+}
+
+/*Add CSS to the front and back of the flipcards*/
+#flip-card .flip-card-front, #flip-card .flip-card-back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /*The back face is hidden, effectively making the element invisible when turned away from the user.*/
+  backface-visibility: hidden;
+  /*Z Index ( z-index ) is a CSS property that defines the order of 
+  overlapping positioned HTML elements.*/
+  z-index: 2;
+  border-radius: 5px;
+}
+#flip-card .flip-card-front {
+    background: lightgreen;
+    border-radius: 5px;
+}
+
+/*flip card rotation*/
+#flip-card .flip-card-back {
+    background: none;
+    transform: rotateY(180deg);
+}
+#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+/*  color: grey;*/
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+/*flipcard end*/
+
+
+
+
+
+
+
+
+/* quiz */
+
+/*CSS for quiz container element*/
+#container{
+    margin : 20px auto;
+    background-color: white;
+    height: 300px;
+    width : 860px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+
+/*style the try again button*/
+#tryAgain{
+    display:none;
+    position: absolute;
+    width : 150px;
+    height :59px;
+    top:200px;
+    left:400px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+    background: none;
+}
+
+#tryAgain:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+
+/*image positioning and sizing in the quiz container*/
+#qImg{
+    width : 250px;
+    height : 100%;
+    position: absolute;
+    left : 0px;
+    top : 0px;
+}
+#qImg img{
+    width : 250px;
+    height : 100%;
+    border-top-left-radius: 5px;
+}
+
+/*position the quiz question*/
+#question{
+    width:700px;
+    height : 125px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+/*question styling*/
+#question p{
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+}
+/*multiple choice container division positioning*/
+#choices{
+    width : 700px;
+    position: absolute;
+    right : 0;
+    top : 125px;
+    padding : 10px
+}
+/*styling for our multiple choice questions*/
+.choice{
+    display: inline-block;
+    width : 135px;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+
+/*position the timer parent div*/
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 1020px;
+    bottom : 0px;
+    text-align: center;
+}
+/*to count the time*/
+#counter{
+    font-size: 3em;
+}
+/*there are two times guauges: a grey and a green and must be positioned so that
+the grey appears to be filling with the green*/
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 440px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 430px;
+}
+
+/*position prgress parent division*/
+#progress{
+    width : 430px;
+    position: absolute;
+    bottom : 0px;
+    right : 0px;
+    padding:5px;
+    text-align: right;
+}
+/*styling for the progress circles*/
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+/*style the invisible score container*/
+#scoreContainer{
+    margin : 20px auto;
+    background-color: white;
+    opacity: 0.9;
+    height: 300px;
+    width : 860px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+}
+
+#scoreContainer p{
+    position: absolute;
+    display: block;
+    width : 59px;
+    height :59px;
+    top:130px;
+    left:50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Style the Image Used to Trigger the Modal */
+#mImage {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+#mImage:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+.popupG1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  /* Modal Content (Image) */
+.popup-content1 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+  
+  
+  /* Add Animation - Zoom in the Modal */
+.popup-content1 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)} 
+}
+  
+  /* The Close Button */
+.close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close1:hover,
+.close1:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
